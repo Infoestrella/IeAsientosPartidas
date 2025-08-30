@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="idasiento" order="100">
+            <widget type="text" fieldname="idasiento" />
+        </column>
+        <column name="subaccount" order="110">
+            <widget type="text" fieldname="codsubcuenta" />
+        </column>
+        <column name="concept" order="120">
+            <widget type="text" fieldname="concepto" />
+        </column>
+        <column name="debit" display="right" order="130">
+            <widget type="money" fieldname="debe">
+                <option color="danger">lt:0</option>
+            </widget>
+        </column>
+        <column name="credit" display="right" order="140">
+            <widget type="money" fieldname="haber">
+                <option color="danger">lt:0</option>
+            </widget>
+        </column>
+    </columns>
+    <rows>
+        <row type="status">
+            <option color="success" fieldname="debe">gt:0</option>
+            <option color="warning" fieldname="haber">gt:0</option>
+        </row>
+    </rows>
+</view>
