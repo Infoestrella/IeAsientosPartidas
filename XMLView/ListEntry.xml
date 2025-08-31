@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="exercise" order="100">
+            <widget type="select" fieldname="codejercicio">
+                <values source="ejercicios" fieldcode="codejercicio" fieldtitle="nombre"/>
+            </widget>
+        </column>
+        <column name="accounting-entry" order="110">
+            <widget type="text" fieldname="numero" />
+        </column>
+        <column name="date" display="left" order="120">
+            <widget type="date" fieldname="fecha"/>
+        </column>
+        <column name="subaccount" order="130">
+            <widget type="text" fieldname="codsubcuenta" />
+        </column>
+        <column name="concept" order="140">
+            <widget type="text" fieldname="concepto" />
+        </column>
+        <column name="debit" display="right" order="150">
+            <widget type="money" fieldname="debe">
+                <option color="danger">lt:0</option>
+            </widget>
+        </column>
+        <column name="credit" display="right" order="160">
+            <widget type="money" fieldname="haber">
+                <option color="danger">lt:0</option>
+            </widget>
+        </column>
+    </columns>
+</view>
