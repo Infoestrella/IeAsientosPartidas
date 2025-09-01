@@ -9,7 +9,7 @@ class ListAsiento
     public function createViews(): Closure
     {
         return function (string $viewName = 'ListEntry') {
-            $this->addView($viewName, 'Join\Entries', 'Partidas', 'fas fa-balance-scale');
+            $this->addView($viewName, 'Join\Entries', 'Partidas', 'fa-solid fa-balance-scale');
 
             $this->addOrderBy($viewName, ['fecha'], 'date', 2);
             $this->addOrderBy($viewName, ['numero'], 'accounting-entry');
