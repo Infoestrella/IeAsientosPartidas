@@ -20,10 +20,10 @@ class ListAsiento
             $this->addFilterPeriod($viewName, 'fecha', 'date', 'asientos.fecha');
             $this->addFilterAutocomplete($viewName, 'codsubcuenta', 'subaccount', 'partidas.codsubcuenta', 'subcuentas', 'codsubcuenta', 'descripcion');
 
-            $this->addFilterNumber($viewName, 'min-total', 'amount', 'partidas.debe', '>=');
-            $this->addFilterNumber($viewName, 'max-total', 'amount', 'partidas.debe', '<=');
-            $this->addFilterNumber($viewName, 'min-total', 'amount', 'partidas.haber', '>=');
-            $this->addFilterNumber($viewName, 'max-total', 'amount', 'partidas.haber', '<=');
+            $this->addFilterNumber($viewName, 'min-debit', 'debit', 'partidas.debe', '>=');
+            $this->addFilterNumber($viewName, 'max-debit', 'debit', 'partidas.debe', '<=');
+            $this->addFilterNumber($viewName, 'min-credit', 'credit', 'partidas.haber', '>=');
+            $this->addFilterNumber($viewName, 'max-credit', 'credit', 'partidas.haber', '<=');
         };
     }
 }
