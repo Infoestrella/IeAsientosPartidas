@@ -7,7 +7,9 @@
             </widget>
         </column>
         <column name="accounting-entry" order="110">
-            <widget type="text" fieldname="numero" />
+            <widget type="select" fieldname="idasiento" onclick="EditAsiento">
+                <values source="asientos" fieldcode="idasiento" fieldtitle="numero" />
+            </widget>
         </column>
         <column name="date" display="left" order="120">
             <widget type="date" fieldname="fecha"/>
@@ -30,3 +32,4 @@
         </column>
     </columns>
 </view>
+
