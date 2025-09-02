@@ -13,6 +13,7 @@ class Entries extends \FacturaScripts\Core\Model\Base\JoinModel
     {
         return [
             'codejercicio' => 'asientos.codejercicio',
+            'idasiento' => 'partidas.idasiento',
             'numero' => 'asientos.numero',
             'fecha' => 'asientos.fecha',
             'codsubcuenta' => 'partidas.codsubcuenta',
