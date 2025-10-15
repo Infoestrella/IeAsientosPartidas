@@ -17,15 +17,18 @@
         <column name="subaccount" order="130">
             <widget type="text" fieldname="codsubcuenta" />
         </column>
-        <column name="concept" order="140">
+        <column name="description" order="140">
+            <widget type="text" fieldname="descripcion" />
+        </column>
+        <column name="concept" order="150">
             <widget type="text" fieldname="concepto" />
         </column>
-        <column name="debit" display="right" order="150">
+        <column name="debit" display="right" order="160">
             <widget type="money" fieldname="debe">
                 <option color="danger">lt:0</option>
             </widget>
         </column>
-        <column name="credit" display="right" order="160">
+        <column name="credit" display="right" order="170">
             <widget type="money" fieldname="haber">
                 <option color="danger">lt:0</option>
             </widget>

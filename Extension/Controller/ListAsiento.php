@@ -19,6 +19,7 @@ class ListAsiento
             $this->addFilterAutocomplete($viewName, 'codejercicio', 'exercise', 'asientos.codejercicio', 'ejercicios', 'codejercicio', 'nombre');
             $this->addFilterPeriod($viewName, 'fecha', 'date', 'asientos.fecha');
             $this->addFilterAutocomplete($viewName, 'codsubcuenta', 'subaccount', 'partidas.codsubcuenta', 'subcuentas', 'codsubcuenta', 'descripcion');
+            $this->addFilterAutocomplete($viewName, 'idasiento', 'concept', 'partidas.idasiento', 'asientos', 'idasiento', 'concepto');
 
             $this->addFilterNumber($viewName, 'min-debit', 'debit', 'partidas.debe', '>=');
             $this->addFilterNumber($viewName, 'max-debit', 'debit', 'partidas.debe', '<=');
