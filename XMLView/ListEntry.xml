@@ -23,6 +23,9 @@
         <column name="concept" order="150">
             <widget type="text" fieldname="concepto" />
         </column>
+        <column name="document" order="150">
+            <widget type="text" fieldname="documento" />
+        </column>
         <column name="debit" display="right" order="160">
             <widget type="money" fieldname="debe">
                 <option color="danger">lt:0</option>

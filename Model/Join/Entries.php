@@ -20,6 +20,7 @@ class Entries extends \FacturaScripts\Core\Model\Base\JoinModel
             'codsubcuenta' => 'partidas.codsubcuenta',
             'descripcion' => 'subcuentas.descripcion',
             'concepto' => 'partidas.concepto',
+            'documento' => 'partidas.documento',
             'debe' => 'partidas.debe',
             'haber' => 'partidas.haber',
         ];

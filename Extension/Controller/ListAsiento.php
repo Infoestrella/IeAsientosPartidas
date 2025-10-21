@@ -14,7 +14,7 @@ class ListAsiento
             $this->addOrderBy($viewName, ['fecha'], 'date', 2);
             $this->addOrderBy($viewName, ['numero'], 'accounting-entry');
 
-            $this->addSearchFields($viewName, ['partidas.concepto', 'asientos.numero']);
+            $this->addSearchFields($viewName, ['partidas.concepto', 'asientos.numero', 'partidas.documento']);
 
             $this->addFilterAutocomplete($viewName, 'codejercicio', 'exercise', 'asientos.codejercicio', 'ejercicios', 'codejercicio', 'nombre');
             $this->addFilterPeriod($viewName, 'fecha', 'date', 'asientos.fecha');
