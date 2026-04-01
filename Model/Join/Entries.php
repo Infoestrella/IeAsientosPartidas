@@ -16,6 +16,7 @@ class Entries extends \FacturaScripts\Core\Model\Base\JoinModel
             'idasiento' => 'partidas.idasiento',
             'numero' => 'asientos.numero',
             'fecha' => 'asientos.fecha',
+            'idsubcuenta' => 'partidas.idsubcuenta',
             'codsubcuenta' => 'partidas.codsubcuenta',
             'concepto' => 'partidas.concepto',
             'debe' => 'partidas.debe',
