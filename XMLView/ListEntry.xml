@@ -18,9 +18,7 @@
             <widget type="text" fieldname="codsubcuenta" />
         </column>
         <column name="description" order="140">
-            <widget type="select" fieldname="idsubcuenta" onclick="EditSubcuenta">
-                <values source="subcuentas" fieldcode="idsubcuenta" fieldtitle="descripcion" />
-            </widget>
+            <widget type="text" fieldname="descripcion" />
         </column>
         <column name="concept" order="150">
             <widget type="text" fieldname="concepto" />
