@@ -2,8 +2,18 @@
 
 namespace FacturaScripts\Plugins\IeAsientosPartidas\Model\Join;
 
-class Entries extends \FacturaScripts\Core\Model\Base\JoinModel
+use FacturaScripts\Core\Template\JoinModel;
+use FacturaScripts\Dinamic\Model\Asiento;
+
+class Entries extends JoinModel
 {
+    /** El asiento es el modelo master: al hacer clic en una partida se abre su asiento. */
+    public function __construct(array $data = [])
+    {
+        parent::__construct($data);
+        $this->setMasterModel(new Asiento());
+    }
+
     protected function getTables(): array
     {
         return ['partidas', 'asientos', 'subcuentas'];

@@ -9,21 +9,17 @@ class ListAsiento
     public function createViews(): Closure
     {
         return function (string $viewName = 'ListEntry') {
-            $this->addView($viewName, 'Join\Entries', 'Partidas', 'fa-solid fa-balance-scale');
-
-            $this->addOrderBy($viewName, ['fecha'], 'date', 2);
-            $this->addOrderBy($viewName, ['numero'], 'accounting-entry');
-
-            $this->addSearchFields($viewName, ['partidas.concepto', 'asientos.numero']);
-
-            $this->addFilterAutocomplete($viewName, 'codejercicio', 'exercise', 'asientos.codejercicio', 'ejercicios', 'codejercicio', 'nombre');
-            $this->addFilterPeriod($viewName, 'fecha', 'date', 'asientos.fecha');
-            $this->addFilterAutocomplete($viewName, 'codsubcuenta', 'subaccount', 'partidas.codsubcuenta', 'subcuentas', 'codsubcuenta', 'descripcion');
-
-            $this->addFilterNumber($viewName, 'min-debit', 'debit', 'partidas.debe', '>=');
-            $this->addFilterNumber($viewName, 'max-debit', 'debit', 'partidas.debe', '<=');
-            $this->addFilterNumber($viewName, 'min-credit', 'credit', 'partidas.haber', '>=');
-            $this->addFilterNumber($viewName, 'max-credit', 'credit', 'partidas.haber', '<=');
+            $this->addView($viewName, 'Join\Entries', 'Partidas', 'fa-solid fa-balance-scale')
+                ->addOrderBy(['fecha'], 'date', 2)
+                ->addOrderBy(['numero'], 'accounting-entry')
+                ->addSearchFields(['partidas.concepto', 'CAST(asientos.numero AS char(255))'])
+                ->addFilterAutocomplete('codejercicio', 'exercise', 'asientos.codejercicio', 'ejercicios', 'codejercicio', 'nombre')
+                ->addFilterPeriod('fecha', 'date', 'asientos.fecha')
+                ->addFilterAutocomplete('codsubcuenta', 'subaccount', 'partidas.codsubcuenta', 'subcuentas', 'codsubcuenta', 'descripcion')
+                ->addFilterNumber('min-debit', 'debit', 'partidas.debe', '>=')
+                ->addFilterNumber('max-debit', 'debit', 'partidas.debe', '<=')
+                ->addFilterNumber('min-credit', 'credit', 'partidas.haber', '>=')
+                ->addFilterNumber('max-credit', 'credit', 'partidas.haber', '<=');
         };
     }
 }
