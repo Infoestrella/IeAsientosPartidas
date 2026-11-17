@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="exercise" order="100">
+            <widget type="select" fieldname="codejercicio">
+                <values source="ejercicios" fieldcode="codejercicio" fieldtitle="nombre"/>
+            </widget>
+        </column>
+        <column name="subaccount" order="110">
+            <widget type="text" fieldname="codsubcuenta"/>
+        </column>
+        <column name="description" order="120">
+            <widget type="text" fieldname="descripcion"/>
+        </column>
+        <column name="cifnif" order="130">
+            <widget type="text" fieldname="cifnif"/>
+        </column>
+        <column name="address" order="140">
+            <widget type="text" fieldname="direccion"/>
+        </column>
+        <column name="zip-code" order="150">
+            <widget type="text" fieldname="codpostal"/>
+        </column>
+        <column name="city" order="160">
+            <widget type="text" fieldname="ciudad"/>
+        </column>
+        <column name="province" order="170">
+            <widget type="text" fieldname="provincia"/>
+        </column>
+    </columns>
+</view>
